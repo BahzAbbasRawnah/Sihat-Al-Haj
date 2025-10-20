@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables */
+:root {
+  /* Light theme (default) */
+  --primary: #006A4E;
+  --secondary: #808080;
+  --text-primary: #333333;
+  --text-secondary: #66A695;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --nav-bg: #264B41;
+  --nav-text: #ffffff;
+  --border-color: #dedee0;
+}
+
+[data-theme="dark"] {
+  /* Dark theme */
+  --primary: #00A877;
+  --secondary: #A0A0A0;
+  --text-primary: #E0E0E0;
+  --text-secondary: #66A695;
+  --bg-primary: #121212;
+  --bg-secondary: #1E1E1E;
+  --nav-bg: #1A332B;
+  --nav-text: #E0E0E0;
+  --border-color: #444444;
+}
+
+/* Custom border styles */
+.custom-border-left {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: var(--border-color);
+}
+
+/* Custom scrollbar styles */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+body,* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Fixed header and navbar styles */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding-top: 108px; /* Only account for header height */
+  overflow-x: hidden;
+}
+
+/* Main content container styles */
+.main-content {
+  min-height: calc(100vh - 108px); /* Viewport height minus header only */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Text colors for content pages */
+.main-content .text-white {
+  color: white !important;
+}
+
+.main-content .bg-white.bg-opacity-95 .text-white {
+  color: var(--text-primary) !important;
+}
+
+.main-content .bg-white.bg-opacity-95 h1,
+.main-content .bg-white.bg-opacity-95 h2,
+.main-content .bg-white.bg-opacity-95 h3 {
+  color: var(--primary) !important;
+}
+
+.main-content .bg-white.bg-opacity-95 p {
+  color: var(--text-primary) !important;
+}
+
+/* Image container for login/signup pages */
+.image-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  left: 40%;
+}
+
+/* Form container for login/signup pages */
+.form-container {
+  width: 40%;
+  background-color: var(--bg-primary);
+  padding: 2rem;
+  height: calc(100vh - 108px);
+  overflow-y: auto;
+  position: relative;
+  z-index: 30;
+}
+
+/* Language direction utilities */
+html[dir="ltr"] .custom-border-left {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: var(--border-color);
+  border-right-width: 0;
+}
+
+html[dir="rtl"] .custom-border-left {
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: var(--border-color);
+  border-left-width: 0;
+}
