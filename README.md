@@ -187,9 +187,7 @@ The platform supports four user types:
    - Access patient information
    - Team coordination
 
-
-
-4. **Pilgrim** (`pilgrim`)
+3. **Pilgrim** (`pilgrim`)
    - Personal health tracking
    - Submit medical requests
    - Access medical services
@@ -303,7 +301,3 @@ Developed in alignment with Saudi Vision 2030 to enhance healthcare services dur
 ---
 
 **Made with ❤️ for the safety and health of Hajj pilgrims**
-
-#   S i h a t - A l - H a j 
- 
- 
